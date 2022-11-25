@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Mehdi vs Bari</title>
+  </head>
+  <body class="container">
+    <img
+      src="../assets/bence-balla-schottner-deGn9vSwXIM-unsplash.jpg"
+      alt="stade"
+      class="background"
+    />
+    <%- include ('../components/header') %>
+    <div class="score">
+      <div class="mehdi">
+        <h2>Mehdi</h2>
+        <h1><%= mehdi %></h1>
+      </div>
+      <div class="bari">
+        <h2>Bari</h2>
+        <h1><%= bari %></h1>
+      </div>
+    </div>
+  </body>
+</html>

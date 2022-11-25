@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  /* Preserve aspet ratio */
+  background-size: contain;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Epilogue", sans-serif;
+  padding: 1rem;
+  height: 100vh;
+}
+header {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 1rem;
+}
+
+header ul {
+  position: relative;
+  background: inherit;
+  backdrop-filter: blur(15px);
+  padding: 1em 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-shadow: 0px 0px 12px 1.5px rgba(0, 0, 0, 0.85);
+}
+header ul > li {
+  width: 50%;
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+header ul > li > span > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header ul > li span {
+  transition: all 150ms ease-in;
+}
+header ul > li span:hover {
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.score {
+  padding: 1em;
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 3em;
+}
+
+.matches {
+  padding: 1em;
+  height: 100%;
+  width: 100%;
+}
+
+.matches > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.matches > ul > li {
+  position: relative;
+  list-style: none;
+  padding: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 12px 1.5px rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.matches > ul > li > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1ch;
+}
+.matches > ul > li > span {
+  position: absolute;
+  bottom: 10px;
+  font-size: 70%;
+  right: 10px;
+}
+.score .mehdi,
+.score .bari {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1ch;
+  letter-spacing: 2px;
+  margin-block: 1ch;
+}
+
+@media (max-width: 850px) {
+  .container {
+    font-size: 0.8rem;
+  }
+  .score .mehdi,
+  .score .bari {
+    padding-top: 2em;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    font-size: 0.65rem;
+  }
+  .matches > ul > li {
+    padding-bottom: 3em;
+    justify-content: space-evenly;
+  }
+  .score {
+    flex-direction: column;
+    gap: 3ch;
+  }
+  .score .mehdi,
+  .score .bari {
+    height: 100%;
+    padding: 0;
+  }
+  header ul {
+    padding: 1em 0.2em;
+    flex-direction: column;
+    align-items: center;
+    gap: 2ch;
+  }
+  header ul > li {
+    width: max-content;
+  }
+  header > ul > li > span > a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    font-size: 0.5rem;
+  }
+}

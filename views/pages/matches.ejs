@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Bari vs Mehdi</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="../assets/bence-balla-schottner-deGn9vSwXIM-unsplash.jpg"
+        alt="stade"
+        class="background"
+      />
+      <%- include("../components/header")%>
+      <div class="matches">
+        <ul>
+          <% matches.map(match =>{ %>
+          <li>
+            <section>
+              <h3>Mehdi</h3>
+              <h1><%= match.mehdi%></h1>
+            </section>
+            <section>
+              <h3>Bari</h3>
+              <h1><%= match.bari %></h1>
+            </section>
+            <span><%= match.createdAt%></span>
+          </li>
+          <%})%>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
